@@ -2,7 +2,7 @@ IR.IR_callbackUser(function (message) {
     COMMAND = message
 })
 let COMMAND = 0
-basic.showIcon(IconNames.Ghost)
+basic.showIcon(IconNames.Tortoise)
 basic.pause(1000)
 let FWD = true
 let FSPEED = 50
@@ -19,7 +19,7 @@ basic.forever(function () {
     if (COMMAND <= 0) {
     	
     } else {
-        if (COMMAND == 10) {
+        if (COMMAND == 24) {
             FWD = true
             LEFT = FSPEED
             RIGHT = FSPEED
@@ -34,12 +34,12 @@ basic.forever(function () {
         } else {
             LAST = COMMAND
         }
-        if (COMMAND == 4) {
+        if (COMMAND == 70) {
             maqueen.motorStop(maqueen.Motors.All)
             music.playTone(131, music.beat(BeatFraction.Half))
             basic.showIcon(IconNames.Chessboard)
             basic.clearScreen()
-        } else if (COMMAND == 12) {
+        } else if (COMMAND == 7) {
             if (LEFT > TRIM) {
                 LEFT += 0 - TRIM
             } else {
